@@ -1,0 +1,162 @@
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.chat-container {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ee2b7b;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+    background-color: #ee2b7b;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.header-image {
+    max-width: 10%; /* Ajustar el tamaño de la imagen */
+    height: auto;
+    margin-right: 10px;
+}
+
+.header-text {
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.chat-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.chat-suggestions button {
+    background-color: #ee2b7b;
+    color: #ffffff;
+    border: none;
+    padding: 5px; /* Reducir el padding */
+    border-radius: 20px; /* Redondear los botones */
+    cursor: pointer;
+    flex: 1 1 calc(50% - 10px); /* Distribuir uniformemente */
+    margin: 5px;
+    font-size: 0.8em; /* Reducir el tamaño de la fuente */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.chat-suggestions button:hover {
+    background-color: #d1226b; /* Color al pasar el mouse */
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.chat-messages::before {
+    content: "CESDE";
+    position: fixed; /* Fijar la posición de la marca de agua */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px; /* Tamaño más grande */
+    font-weight: bold; /* Letras más gruesas */
+    font-family: Arial, sans-serif; /* Fuente Arial */
+    color: rgba(238, 43, 123, 0.1);
+    pointer-events: none;
+}
+
+.chat-messages .user-message,
+.chat-messages .bot-message {
+    background-color: #f8c8dc; /* Color rosa */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 15px;
+    margin: 35px 0;
+    max-width: 80%;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.chat-messages .user-message {
+    align-self: flex-end;
+    background-color: #ee2b7b; /* Color rosa más oscuro para el usuario */
+    color: #ffffff;
+}
+
+.chat-messages .user-message::before {
+    content: "Tú:";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 0.8em;
+    color: #ee2b7b;
+    font-weight: bold; /* Añadir negrilla */
+}
+
+.chat-messages .bot-message {
+    align-self: flex-start;
+    margin-left: 60px; /* Desplazar el mensaje del bot hacia la derecha */
+}
+
+.chat-messages .bot-message::before {
+    content: "CESDE:";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 0.8em;
+    color: #ee2b7b;
+    font-weight: bold; /* Añadir negrilla */
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ee2b7b;
+    background-color: #f1f1f1; /* Fondo más claro */
+    padding: 10px; /* Añadir padding */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Añadir sombra */
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ee2b7b; /* Añadir borde */
+    border-radius: 5px; /* Bordes redondeados */
+    outline: none;
+    margin-right: 10px; /* Espacio entre el input y el botón */
+}
+
+.chat-input button {
+    background-color: #ee2b7b;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añadir sombra */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.chat-input button:hover {
+    background-color: #d1226b; /* Color al pasar el mouse */
+}

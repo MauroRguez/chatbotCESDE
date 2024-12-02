@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot CESDE</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="./img/Imagen1.png" alt="Chatbot CESDE" class="header-image">
+            <span class="header-text">Chatbot CESDE</span>
+        </div>
+        <div class="chat-suggestions">
+            <button onclick="sendMessage('¿Cuáles son los programas educativos que ofrece el CESDE?')">¿Cuáles son los programas educativos que ofrece el CESDE?</button>
+            <button onclick="sendMessage('¿Cuál es el objetivo de los programas educativos?')">¿Cuál es el objetivo de los programas educativos?</button>
+            <button onclick="sendMessage('¿Cuál es la duración de los programas educativos?')">¿Cuál es la duración de los programas educativos?</button>
+            <button onclick="sendMessage('¿Cuál es el horario de los programas educativos?')">¿Cuál es el horario de los programas educativos?</button>
+            <button onclick="sendMessage('¿Cómo puedo inscribirme en un programa educativo?')">¿Cómo puedo inscribirme en un programa educativo?</button>
+            <button onclick="sendMessage('¿Qué programas de becas hay disponibles?')">¿Qué programas de becas hay disponibles?</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Aquí irán los mensajes del chat -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Escribe un mensaje...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+    <script src="./js.js"></script>
+</body>
+</html>
